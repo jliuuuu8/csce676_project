@@ -1,4 +1,4 @@
-# csce676_project# Structural Analysis: SNAP Ego-Twitter Network
+Structural Analysis: SNAP Ego-Twitter Network
 
 ## 📖 Overview
 
