@@ -2,7 +2,7 @@ Structural Analysis: SNAP Ego-Twitter Network
 
 ## 📖 Overview
 
-This project performs structural analysis on the SSNAP ego-Twitter follower network. The goal is to investigate influence, hierarchy, connectivity, and structural similarity within a relatively large social network graph utilizing data mining techniques and embedding-based methods. 
+This project performs structural analysis on the SNAP ego-Twitter follower network. The goal is to investigate influence, hierarchy, connectivity, and structural similarity within a relatively large social network graph utilizing data mining techniques and embedding-based methods. 
 
 This is a long-term data mining project that starts off as exploratory graph analysis and transitions into node embedding and interactive visualization discovery.
 
