@@ -1,59 +1,73 @@
-Structural Analysis: SNAP Ego-Twitter Network
+# Echo Chamber Detection in Large-Scale Social Networks
 
 ## 📖 Overview
 
-This project performs structural analysis on the SNAP ego-Twitter follower network. The goal is to investigate influence, hierarchy, connectivity, and structural similarity within a relatively large social network graph utilizing data mining techniques and embedding-based methods. 
+This project investigates whether large social networks exhibit **echo chamber behavior**, where users primarily interact within tightly connected communities rather than across diverse groups. Utilizing the SNAP Ego-Twitter dataset, I analyze structural patterns in the Twitter network to determine whether meaningful community structure exists. If such structure exists, then how does that information flow between various groups.
 
-This is a long-term data mining project that starts off as exploratory graph analysis and transitions into node embedding and interactive visualization discovery.
+👉 Start with the following notebook: **main_notebook.ipynb**
+
+📹 Advertisement Video: https://www.youtube.com/watch?v=TvkBkBJWwAA&t=1s
 
 --- 
 
-## 📁 Dataset
-
-**Source:** 
-Stanford SNAP Repository
-
-Link: https://snap.stanford.edu/data/ego-Twitter.html
-
-**Utilized File:**
-'twitter_combined.txt.gz'
-
-**Dataset Characteristics:**
-
-    - Directed Network
-    - ~81,000 nodes
-    - ~1.7 million edges
-
-This dataset represents a snapshot of the popular app, Twitter, and it's follower structure.
-
-## 🔍 Phase 1: Exploratory Data Analysis
-
-The first phase focuses on understanding fundamental structural properties of the social network.
-
-### Graph Statistics
-    - Node and edge counts
-    - Density
-    - Reciprocity
-    - Self-loops
-
-### Degree Analysis
-    - In-degree distribution
-    - Out-degree distribution
-    - Behavior visualization
-
-### Connectivity Analysis
-    - Weakly Connected Components
-    - Strongly Connected Components
-    - Giant SCC
-    - Strong core structure
-
-### Approximate Shortest Path Sampling
-    - Reachability
-
-### Community Detection
-    - Louvain modularity optimization
-    - Community size 
+## ❓Research Questions
+- Do large social networks exhibit tightly clustered communities?
+- Are tese communities structurally isolated or still interconnected?
+- Are there "bridge users" that connect separate communities?
 
 ---
 
-Phase 2 and Phase 3 are yet to be established at this point of the project. However, I would like to focus on implementing methods taught outside of the classroom and find ways to enhance interpretability through interactive visualizations. This would show more higher level analysis that would be easier to understand. 
+## 🗂️ Dataset
+- **SNAP Ego-Twitter Dataset**
+- Link: https://snap.stanford.edu/data/wiki-Vote.html
+- File: twitter_combined.txt.gz
+
+### Preprocessing:
+- Loaded raw edge list into a directed graph (follower relationships)
+- Extracted largest weakly connected component (main interaction)
+- Converted to undirected graph for community analysis
+
+---
+
+## 🔬 Research Approach
+
+### Phase 1: Structural Analysis
+- Computed global graph properties: graph size, density, reciprocity
+- Degree distributions (in/out degree)
+
+### Phase 2: Community Detection
+- Louvain(primary method)
+- Label Propagation (comparison)
+- Greedy Modularity was considered for a comparison community detection method, but it was computationally expensive and not scalable to the graph.
+
+### Phase 4: Bridge User Detection
+
+- Features:
+    - Degree
+    - Distinct Neighbor Communities
+    - Betweenness
+    - Clustering Coefficient
+- Node2Vec used to learn vector representataions of nodes based on graph structure
+- K-Means clustering applied to embeddings to group similar nodes
+- Compared embedding clusters with Louvain communities using:
+    - ARI (Adjusted Rand Index)
+    - NMI (Normalized Mutual Information)
+    - Silhouette Score
+- Isolation Forest for detecting structural anomalies
+
+### Phase 5: Validation of Results
+- Degree-preserving randomized baseline
+- Compared modularity and structure to random graph
+
+
+## 🔍 Key Results
+
+- High modularity **(~0.80)** indicates strong community separation
+- **~87%** of edges stay within communities
+- Randomized baseline destroys graph structure and confirms that communities are meaningful
+- Presence of **bridger users** connect multiple communities together
+- Communities are tightly connected but not fully isolated
+
+👀 Conclusion:
+- The network exhibits strong echo-chamber like structure, but allows for selective cross-community interaction.
+
