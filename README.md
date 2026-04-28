@@ -12,7 +12,7 @@ This project investigates whether large social networks exhibit **echo chamber b
 
 ## ❓Research Questions
 - Do large social networks exhibit tightly clustered communities?
-- Are tese communities structurally isolated or still interconnected?
+- Are these communities structurally isolated or still interconnected?
 - Are there "bridge users" that connect separate communities?
 
 ---
@@ -47,7 +47,7 @@ This project investigates whether large social networks exhibit **echo chamber b
     - Distinct Neighbor Communities
     - Betweenness
     - Clustering Coefficient
-- Node2Vec used to learn vector representataions of nodes based on graph structure
+- Node2Vec used to learn vector representations of nodes based on graph structure
 - K-Means clustering applied to embeddings to group similar nodes
 - Compared embedding clusters with Louvain communities using:
     - ARI (Adjusted Rand Index)
@@ -59,20 +59,25 @@ This project investigates whether large social networks exhibit **echo chamber b
 - Degree-preserving randomized baseline
 - Compared modularity and structure to random graph
 
+---
 
 ## 🔍 Key Results
 
 - High modularity **(~0.80)** indicates strong community separation
 - **~87%** of edges stay within communities
 - Randomized baseline destroys graph structure and confirms that communities are meaningful
-- Presence of **bridger users** connect multiple communities together
+- Presence of **bridge users** connect multiple communities together
 - Communities are tightly connected but not fully isolated
 
 👀 Conclusion:
-- The network exhibits strong echo-chamber like structure, but allows for selective cross-community interaction.
+- The network exhibits strong echo-chamber-like structure, but allows for selective cross-community interaction.
+
+---
 
 ## 🐍 Python Version
 - Python 3.12.13
+
+--- 
 
 ## 🌍 Reproduce the Work
 This project was developed in Google Colab. Therefore, the easiest way to reproduce the project is to rerun the notebook in Colab.
@@ -106,6 +111,8 @@ py -3.12 -m pip install -r requirements.txt
 5. Click "Run All"
     - When selecting the kernel, make sure to choose any Python 3.12 version. Picking anything else will cause the code to break.
 
+---
+
 ## 📦 Key Dependencies
 - networkx 3.6.1
 - numpy 1.26.4
@@ -113,6 +120,8 @@ py -3.12 -m pip install -r requirements.txt
 - matplotlib 3.10.0
 - scikit-learn 1.6.1
 - node2vec 0.5.0
+
+---
 
 ## 🌳 Repository Structure
 ```
