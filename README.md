@@ -71,10 +71,38 @@ This project investigates whether large social networks exhibit **echo chamber b
 👀 Conclusion:
 - The network exhibits strong echo-chamber like structure, but allows for selective cross-community interaction.
 
-# 🐍 Python Version
+## 🐍 Python Version
 - Python 3.12.13
 
 ## Reproduce the Work
+This project was developed in Google Colab. Therefore, the easiest way to reproduce the project is to rerun the notebook in Colab.
+
+### Option 1: Google Colab
+
+1. Open 'main_notebook.ipynb' in Google Colab.
+2. Run all cells from top to bottom
+
+## Option 2: Run Locally on VS Code.
+
+Python 3.12 is recommended
+
+1. Install extensions:
+    - Python (Microsoft)
+    - Jupyter (Microsoft)
+
+2. Clone GitHub repository:
+```bash
+git clone https://github.com/jliuuuu8/csce676_project.git
+```
+3. Open project folder in VS Code and click  on "main_notebook.ipynb"
+
+4. Install all the required dependencies in the VS Code terminal
+```bash
+py- -3.12 -m pip install -r requirements.txt
+```
+
+5. Click "Run All"
+    - When selecting the kernel, make sure to choose any Python 3.12 version. Picking anything else will cause the code to break.
 
 
 
