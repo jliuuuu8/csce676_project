@@ -82,29 +82,29 @@ This project was developed in Google Colab. Therefore, the easiest way to reprod
 1. Open 'main_notebook.ipynb' in Google Colab.
 2. Run all cells from top to bottom
 
-## Option 2: Run Locally on VS Code.
+### Option 2: Run Locally on VS Code
 
-Python 3.12 is recommended
+Python 3.12 is required
 
-1. Install extensions:
-    - Python (Microsoft)
-    - Jupyter (Microsoft)
+1. Have Python 3.12 already installed on local machine. Open the VS Code terminal and run the command at the bottom.
+```bash 
+ winget install Python.Python.3.12 --scope machine 
+```
 
 2. Clone GitHub repository:
 ```bash
 git clone https://github.com/jliuuuu8/csce676_project.git
 ```
-3. Open project folder in VS Code and click  on "main_notebook.ipynb"
 
-4. Install all the required dependencies in the VS Code terminal
+3. Open project folder in VS Code and click on "main_notebook.ipynb"
+
+4. Install all the required dependencies by pasting the command into the VS Code terminal
 ```bash
-py- -3.12 -m pip install -r requirements.txt
+py -3.12 -m pip install -r requirements.txt
 ```
 
 5. Click "Run All"
     - When selecting the kernel, make sure to choose any Python 3.12 version. Picking anything else will cause the code to break.
-
-
 
 ## 📦Key Dependencies
 - networkx 3.6.1
@@ -113,4 +113,6 @@ py- -3.12 -m pip install -r requirements.txt
 - matplotlib 3.10.0
 - scikit-learn 1.6.1
 - node2vec 0.5.0
+
+## Repository Structure
 
