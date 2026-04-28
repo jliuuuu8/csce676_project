@@ -71,3 +71,18 @@ This project investigates whether large social networks exhibit **echo chamber b
 👀 Conclusion:
 - The network exhibits strong echo-chamber like structure, but allows for selective cross-community interaction.
 
+# 🐍 Python Version
+- Python 3.12.13
+
+## Reproduce the Work
+
+
+
+## 📦Key Dependencies
+- networkx 3.6.1
+- numpy 1.26.4
+- pandas 2.2.2
+- matplotlib 3.10.0
+- scikit-learn 1.6.1
+- node2vec 0.5.0
+
