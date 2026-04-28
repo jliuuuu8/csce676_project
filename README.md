@@ -19,7 +19,7 @@ This project investigates whether large social networks exhibit **echo chamber b
 
 ## 🗂️ Dataset
 - **SNAP Ego-Twitter Dataset**
-- Link: https://snap.stanford.edu/data/wiki-Vote.html
+- Link: https://snap.stanford.edu/data/ego-Twitter.html
 - File: twitter_combined.txt.gz
 
 ### Preprocessing:
