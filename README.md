@@ -115,6 +115,7 @@ py -3.12 -m pip install -r requirements.txt
 - node2vec 0.5.0
 
 ## 🌳 Repository Structure
+```
 csce676_project/
 ├── checkpoints/
 │   ├── checkpoint_1.ipynb
@@ -122,3 +123,4 @@ csce676_project/
 ├── main_notebook.ipynb
 ├── README.md
 └── requirements.txt
+```
