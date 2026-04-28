@@ -74,7 +74,7 @@ This project investigates whether large social networks exhibit **echo chamber b
 ## 🐍 Python Version
 - Python 3.12.13
 
-## Reproduce the Work
+## 🌍 Reproduce the Work
 This project was developed in Google Colab. Therefore, the easiest way to reproduce the project is to rerun the notebook in Colab.
 
 ### Option 1: Google Colab
@@ -106,7 +106,7 @@ py -3.12 -m pip install -r requirements.txt
 5. Click "Run All"
     - When selecting the kernel, make sure to choose any Python 3.12 version. Picking anything else will cause the code to break.
 
-## 📦Key Dependencies
+## 📦 Key Dependencies
 - networkx 3.6.1
 - numpy 1.26.4
 - pandas 2.2.2
@@ -114,5 +114,11 @@ py -3.12 -m pip install -r requirements.txt
 - scikit-learn 1.6.1
 - node2vec 0.5.0
 
-## Repository Structure
-
+## 🌳 Repository Structure
+csce676_project/
+├── checkpoints/
+│   ├── checkpoint_1.ipynb
+│   └── checkpoint_2.ipynb
+├── main_notebook.ipynb
+├── README.md
+└── requirements.txt
